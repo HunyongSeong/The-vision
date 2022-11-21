@@ -7,8 +7,21 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <link rel="stylesheet" href="style.css">
   <!-- /* 검색창 */ -->
-  <style>
 
+    <!--Basic structure of slider 이미지 슬라이드 4개 이미지 -->
+    <div class="container">
+    <!--Area of the images-->
+        <div class="wrapper">
+          <img src="https://filmswot.files.wordpress.com/2018/01/coco_dominates_chinese_box_office_.jpg">
+          <img src="https://www.foundry.com/sites/default/files/inline-images/Images_003_0.jpg">
+          <img src="https://www.foylefilmfestival.org/sites/default/files/COCO%20main%20image%203.jpg">
+          <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2017%2F11%2Fcoco_c330_56b_pub-pub16n-186_rgb-2000.jpg">
+       </div>
+
+   </div>
+   <!--Basic structure of slider 이미지 슬라이드 4개 이미지 -->
+
+  <style>
 
   /* 여기줄은 메뉴바 */
   ul {
@@ -71,66 +84,122 @@
       margin: 0;
   padding: 0;
   background-color: #fff;
-}
-.search-box{
-  padding: 5px;
-  position: absolute;
-  right: 15px;
-  top: 8px;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%,-50%); */
-  height: 30px;
-  background-color: #fff;
-  border: 10px solid #000000;
-  border-radius: 30px;
-  transition: 0.4s;
-  width:30px;
-}
-.search-box:hover{
-  box-shadow: 0px 0px .5px 1px #000000;
-  width: 282px;
-}
-.search-btn{
-  text-decoration: none;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-}
-.search-box:hover > .search-btn{
-  background-color: #fff;
-}
-.search-txt{
-  display: flex;
-  padding: 0;
-  width: 0px;
-  border:none;
-  background: none;
-  outline: none;
-  float: left;
-  font-size: 1rem;
-  line-height: 30px;
-  transition: .4s;
-}
-.search-box:hover > .search-txt{
-  width: 240px;
-  padding: 0 6px;
-  /* 여기까지검색창 */
-    }
-
+  }
+  .search-box{
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    height: 30px;
+    background-color: #fff;
+    border: 10px solid #000000;
+    border-radius: 30px;
+    transition: 0.4s;
+    width:30px;
+  }
+  .search-box:hover{
+    box-shadow: 0px 0px .5px 1px #000000;
+    width: 282px;
+  }
+  .search-btn{
+    text-decoration: none;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+  }
+  .search-box:hover > .search-btn{
+    background-color: #fff;
+  }
+  .search-txt{
+    display: flex;
+    padding: 0;
+    width: 0px;
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    font-size: 1rem;
+    line-height: 30px;
+    transition: .4s;
+  }
+  .search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+    /* 여기까지검색창 */
+  }
   h2{text-align: center;}
+  /*The webpage has been designed 이미지 슬라이드 4개 양식*/
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
 
+  body{
+      background-color: #ffffff;
+  }
+
+  /*Basic structure of slider*/
+  .container{
+      width: 500px;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+      border: 10px solid #ffffff;
+      border-radius: 8px;
+      box-shadow: -1px 5px 15px black;
+  }
+
+  /*Area of images*/
+  .wrapper{
+      width: 100%;
+      display: flex;
+      animation: slide 16s infinite;
+  }
+
+  img{
+      width: 100%;
+  }
+  /*Animation activated by keyframes*/
+  @keyframes slide{
+      0%{
+          transform: translateX(0);
+      }
+      25%{
+          transform: translateX(0);
+      }
+      30%{
+          transform: translateX(-100%);
+      }
+      50%{
+          transform: translateX(-100%);
+      }
+      55%{
+          transform: translateX(-200%);
+      }
+      75%{
+          transform: translateX(-200%);
+      }
+      80%{
+          transform: translateX(-300%);
+      }
+      100%{
+          transform: translateX(-300%);
+      }
+  }
+  /*The webpage has been designed 이미지 슬라이드 4개 양식*/
   </style>
-  <!-- Start HTML Slider Code HEAD section -->
-  <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-  <script type="text/javascript" src="engine1/jquery.js"></script>
-  <!-- End HTML Slider Code HEAD section -->
 </head>
 
 <body style="background-color:black;">
@@ -153,43 +222,19 @@
          <i class="fas fa-search"></i>
        </a>
   </div>
-  <!-- Start Slider HTML Code BODY section -->
-  <div id="wowslider-container1">
-  <div class="ws_images"><ul>
-  		<li><img src="wonsoju.jpg" alt="Helikopter" title="Helikopter" id="wows1_0"/>Type of rotorcraft</li>
-  		<li><img src="wonsoju.jpg" alt="Aircraft" title="Aircraft" id="wows1_1"/>Machine that is able to fly by gaining support from the air</li>
-  		<li><img src="wonsoju.jpg" alt="Hang Glider" title="Hang Glider" id="wows1_2"/>Non-motorized foot-launched heavier-than-air aircraft</li>
-  		<li><img src="wonsoju.jpg" alt="Aerostat" title="Aerostat" id="wows1_3"/>Hot air balloon</li>
-  		<li><img src="wonsoju.jpg" alt="Rocket" title="Rocket" id="wows1_4"/>Spacecraft that obtains thrust from a rocket engine</li>
-  	</ul></div>
-  	<div class="ws_bullets"><div>
-  		<a href="#" title="Helikopter"><span><img src="data1/tooltips/action21892.jpg" alt="Helikopter"/>1</span></a>
-  		<a href="#" title="Aircraft"><span><img src="data1/tooltips/aircraft537963.jpg" alt="Aircraft"/>2</span></a>
-  		<a href="#" title="Hang Glider"><span><img src="data1/tooltips/hangglider1278361.jpg" alt="Hang Glider"/>3</span></a>
-  		<a href="#" title="Aerostat"><span><img src="data1/tooltips/hotair1373167.jpg" alt="Aerostat"/>4</span></a>
-  		<a href="#" title="Rocket"><span><img src="data1/tooltips/rocketlaunch67643.jpg" alt="Rocket"/>5</span></a>
-  	</div></div>
-  <div class="ws_shadow"></div>
-  </div>
-  <script type="text/javascript" src="engine1/wowslider.js"></script>
-  <script type="text/javascript" src="engine1/script.js"></script>
-  <!-- Slider HTML Code BODY section -->
   <!-- 검색창 // 아래는 이미지-->
   <p>
     <a href="https://www.wonsoju.com" target="_blank" rel="noopener noreferrer">
-      <img src="wonsoju.jpg" border="0" style="width:100%;height:auto;" />
+      <img src="wonsoju.jpg" border="0" style="max-width:100%;height:auto;" />
     </a>
   </p>
-  <img src="jaypark.jpeg" border="0" style="display: block; margin: 0 auto; max-width:100%;height:auto;" />
+  <img src="jaypark.jpeg" border="0" style="max-width:100%;height:auto;" />
 
 
   <h2><span style="color: white;"><font size= "6pt">Jay Park</font></span></h2>
   <p></p>
   <img src="jaypark.jpeg" width="300" height="300">
   <img src="wonsoju.jpg" width="300" height="300">
-  <img src="BIBI.jpeg"
-  style="float: left;  margin-right: 20px; margin-bottom: 10px;  width:100px; height:100px;"
-  / >
-
+  <img src="BIBI.jpeg" width="300" height="300">
 
 </body>
